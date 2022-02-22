@@ -39,7 +39,16 @@ class Calculator {
     etc
      */
     int fibonacciNumberFinder(int n){
-        return 0;
+        int fibSequence[] = new int[n + 2];
+        int i;
+
+        fibSequence[0] = 0;
+        fibSequence[1] = 1;
+
+        for (i = 2; i <= n; i++) {
+            fibSequence[i] = fibSequence[i - 1] + fibSequence[i - 2];
+        }
+        return fibSequence[n];
     }
 
 
@@ -51,7 +60,7 @@ class Calculator {
     if int a = 16 then this method returns: 10000
      */
     String intToBinaryNumber(int n){
-        return null;
+        return Integer.toBinaryString(n);
     }
 
     /*
