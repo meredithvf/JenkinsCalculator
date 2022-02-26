@@ -1,10 +1,9 @@
-environment {
-        registry = "meredithvf/204-jenkins-calculator"
-        registryCredential = 'dockerhub'
-        dockerImage=''
-}
-
 pipeline {
+    environment {
+            registry = 'meredithvf/204-jenkins-calculator'
+            registryCredential = 'dockerhub'
+            dockerImage=''
+    }
     agent any
     tools {
         maven 'apache maven 3.6.3'
